@@ -239,10 +239,10 @@ export const botConfig = {
     defaultPriority: "none",
 
     // Category ID where closed tickets are archived.
-    archiveCategory: null,
+    archiveCategory: 1497915076491870262,
 
     // Channel ID where ticket logs are sent.
-    logChannel: null,
+    logChannel: 1498437284020748339,
   },
 
   // =========================
