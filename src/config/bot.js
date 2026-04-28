@@ -23,8 +23,8 @@ export const botConfig = {
   // 🎫 TICKET SYSTEM (UG1)
   // =========================
   tickets: {
-    defaultCategory: "PUT_CATEGORY_ID",
-    logChannel: "PUT_LOG_CHANNEL_ID",
+    defaultCategory: "1497915076491870262",
+    logChannel: "1498437284020748339",
 
     supportRoles: ["SUPPORT_ROLE_ID"],
     adminRoles: ["ADMIN_ROLE_ID"],
