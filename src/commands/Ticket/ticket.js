@@ -164,6 +164,10 @@ description: panelMessage,
 .setLabel(buttonLabel)
                     .setStyle(ButtonStyle.Primary)
                     .setEmoji("📩"),
+                  .setCustomId("create_ticket")
+.setLabel(buttonLabel)
+                    .setStyle(ButtonStyle.Primary)
+                    .setEmoji("📩"),
             );
 
             try {
