@@ -160,35 +160,10 @@ description: panelMessage,
 
             const ticketButton = new ActionRowBuilder().addComponents(
                 new ButtonBuilder()
-                   
-                 .setCustomId("create_ticket")
+                    .setCustomId("create_ticket")
 .setLabel(buttonLabel)
                     .setStyle(ButtonStyle.Primary)
-                    .setEmoji("🔔"),
-                 .setCustomId("create_ticket")
-.setLabel(buttonLabel)
-                    .setStyle(ButtonStyle.Primary)
-                    .setEmoji("💚"),
-                 .setCustomId("create_ticket")
-.setLabel(buttonLabel)
-                    .setStyle(ButtonStyle.Primary)
-                    .setEmoji("🚨"),
-                 .setCustomId("create_ticket")
-.setLabel(buttonLabel)
-                    .setStyle(ButtonStyle.Primary)
-                    .setEmoji("🔵"),
-                 .setCustomId("create_ticket")
-.setLabel(buttonLabel)
-                    .setStyle(ButtonStyle.Primary)
-                    .setEmoji("🧾"),
-                 .setCustomId("create_ticket")
-.setLabel(buttonLabel)
-                    .setStyle(ButtonStyle.Primary)
-                    .setEmoji("👑"),
-                 .setCustomId("create_ticket")
-.setLabel(buttonLabel)
-                    .setStyle(ButtonStyle.Primary)
-                    .setEmoji("🎬"),
+                    .setEmoji("📩"),
             );
 
             try {
