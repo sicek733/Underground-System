@@ -158,62 +158,18 @@ description: panelMessage,
                 color: getColor('info')
             });
 
-            const row1 = new ActionRowBuilder().addComponents(
-    new ButtonBuilder()
-        .setCustomId("ticket:tech")
-        .setLabel("الدعم الفني")
-        .setStyle(ButtonStyle.Secondary)
-        .setEmoji("🔔"),
-
-    new ButtonBuilder()
-        .setCustomId("ticket:store")
-        .setLabel("تذكرة متجر")
-        .setStyle(ButtonStyle.Success)
-        .setEmoji("🟢"),
-
-    new ButtonBuilder()
-        .setCustomId("ticket:player")
-        .setLabel("شكوى على لاعب")
-        .setStyle(ButtonStyle.Danger)
-        .setEmoji("🔴"),
-
-    new ButtonBuilder()
-        .setCustomId("ticket:admin")
-        .setLabel("شكوى على إداري")
-        .setStyle(ButtonStyle.Primary)
-        .setEmoji("🔵")
-);
-
-const row2 = new ActionRowBuilder().addComponents(
-    new ButtonBuilder()
-        .setCustomId("ticket:unban")
-        .setLabel("طلب فك باند")
-        .setStyle(ButtonStyle.Danger)
-        .setEmoji("🔨"),
-
-    new ButtonBuilder()
-        .setCustomId("ticket:refund")
-        .setLabel("طلب تعويض")
-        .setStyle(ButtonStyle.Success)
-        .setEmoji("💰"),
-
-    new ButtonBuilder()
-        .setCustomId("ticket:high")
-        .setLabel("الإدارة العليا")
-        .setStyle(ButtonStyle.Danger)
-        .setEmoji("👑"),
-
-    new ButtonBuilder()
-        .setCustomId("ticket:creator")
-        .setLabel("صانع محتوى")
-        .setStyle(ButtonStyle.Secondary)
-        .setEmoji("📸")
-);
+            const ticketButton = new ActionRowBuilder().addComponents(
+                new ButtonBuilder()
+                    .setCustomId("create_ticket")
+.setLabel(buttonLabel)
+                    .setStyle(ButtonStyle.Primary)
+                    .setEmoji("📩"),
+            );
 
             try {
                 await panelChannel.send({
                     embeds: [setupEmbed],
-                    components: [row1, row2],
+                    components: [ticketButton],
                 });
 
                 if (client.db && interaction.guildId) {
@@ -375,6 +331,3 @@ const row2 = new ActionRowBuilder().addComponents(
         }
     }
 };
-
-
-
