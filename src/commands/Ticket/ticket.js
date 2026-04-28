@@ -158,18 +158,62 @@ description: panelMessage,
                 color: getColor('info')
             });
 
-            const ticketButton = new ActionRowBuilder().addComponents(
-                new ButtonBuilder()
-                    .setCustomId("create_ticket")
-.setLabel(buttonLabel)
-                    .setStyle(ButtonStyle.Primary)
-                    .setEmoji("📩"),
-            );
+            const row1 = new ActionRowBuilder().addComponents(
+    new ButtonBuilder()
+        .setCustomId("ticket_tech")
+        .setLabel("الدعم الفني")
+        .setStyle(ButtonStyle.Secondary)
+        .setEmoji("🔔"),
+
+    new ButtonBuilder()
+        .setCustomId("ticket_store")
+        .setLabel("تذكرة متجر")
+        .setStyle(ButtonStyle.Success)
+        .setEmoji("🟢"),
+
+    new ButtonBuilder()
+        .setCustomId("ticket_player")
+        .setLabel("شكوى على لاعب")
+        .setStyle(ButtonStyle.Danger)
+        .setEmoji("🔴"),
+
+    new ButtonBuilder()
+        .setCustomId("ticket_admin")
+        .setLabel("شكوى على إداري")
+        .setStyle(ButtonStyle.Primary)
+        .setEmoji("🔵")
+);
+
+const row2 = new ActionRowBuilder().addComponents(
+    new ButtonBuilder()
+        .setCustomId("ticket_unban")
+        .setLabel("طلب فك باند")
+        .setStyle(ButtonStyle.Danger)
+        .setEmoji("🔨"),
+
+    new ButtonBuilder()
+        .setCustomId("ticket_refund")
+        .setLabel("طلب تعويض")
+        .setStyle(ButtonStyle.Success)
+        .setEmoji("💰"),
+
+    new ButtonBuilder()
+        .setCustomId("ticket_high")
+        .setLabel("الإدارة العليا")
+        .setStyle(ButtonStyle.Danger)
+        .setEmoji("👑"),
+
+    new ButtonBuilder()
+        .setCustomId("ticket_creator")
+        .setLabel("صانع محتوى")
+        .setStyle(ButtonStyle.Secondary)
+        .setEmoji("📸")
+);
 
             try {
                 await panelChannel.send({
                     embeds: [setupEmbed],
-                    components: [ticketButton],
+                    components: [row1, row2],
                 });
 
                 if (client.db && interaction.guildId) {
