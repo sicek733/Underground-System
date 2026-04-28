@@ -160,25 +160,25 @@ description: panelMessage,
 
             const row1 = new ActionRowBuilder().addComponents(
     new ButtonBuilder()
-        .setCustomId("ticket_tech")
+        .setCustomId("ticket:tech")
         .setLabel("الدعم الفني")
         .setStyle(ButtonStyle.Secondary)
         .setEmoji("🔔"),
 
     new ButtonBuilder()
-        .setCustomId("ticket_store")
+        .setCustomId("ticket:store")
         .setLabel("تذكرة متجر")
         .setStyle(ButtonStyle.Success)
         .setEmoji("🟢"),
 
     new ButtonBuilder()
-        .setCustomId("ticket_player")
+        .setCustomId("ticket:player")
         .setLabel("شكوى على لاعب")
         .setStyle(ButtonStyle.Danger)
         .setEmoji("🔴"),
 
     new ButtonBuilder()
-        .setCustomId("ticket_admin")
+        .setCustomId("ticket:admin")
         .setLabel("شكوى على إداري")
         .setStyle(ButtonStyle.Primary)
         .setEmoji("🔵")
@@ -186,25 +186,25 @@ description: panelMessage,
 
 const row2 = new ActionRowBuilder().addComponents(
     new ButtonBuilder()
-        .setCustomId("ticket_unban")
+        .setCustomId("ticket:unban")
         .setLabel("طلب فك باند")
         .setStyle(ButtonStyle.Danger)
         .setEmoji("🔨"),
 
     new ButtonBuilder()
-        .setCustomId("ticket_refund")
+        .setCustomId("ticket:refund")
         .setLabel("طلب تعويض")
         .setStyle(ButtonStyle.Success)
         .setEmoji("💰"),
 
     new ButtonBuilder()
-        .setCustomId("ticket_high")
+        .setCustomId("ticket:high")
         .setLabel("الإدارة العليا")
         .setStyle(ButtonStyle.Danger)
         .setEmoji("👑"),
 
     new ButtonBuilder()
-        .setCustomId("ticket_creator")
+        .setCustomId("ticket:creator")
         .setLabel("صانع محتوى")
         .setStyle(ButtonStyle.Secondary)
         .setEmoji("📸")
